@@ -3,7 +3,9 @@ var app = express();
 var mongoose = require('mongoose');
 var path = require("path");
 
-mongoose.connect("mongodb://localhost/url_shortener");
+// var mongoURL = "mongodb://localhost/url_shortener";
+var mongoURL = "mongodb://danny:password@ds157971.mlab.com:57971/yelpcamp"
+mongoose.connect(mongoURL);
 
 //create schema
 var urlSchema = new mongoose.Schema({
